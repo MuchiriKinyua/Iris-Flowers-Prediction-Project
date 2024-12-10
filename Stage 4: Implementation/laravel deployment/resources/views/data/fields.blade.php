@@ -1,29 +1,29 @@
-<!-- Sepal Length Field -->
+<!-- Sepallengthcm Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('sepal_length', 'Sepal Length:') !!}
-    {!! Form::number('sepal_length', null, ['class' => 'form-control']) !!}
+    {!! Form::label('SepalLengthCm', 'Sepal Length (cm):') !!}
+    {!! Form::number('SepalLengthCm', null, ['class' => 'form-control', 'step' => '0.01']) !!}
 </div>
 
-<!-- Sepal Width Field -->
+<!-- Sepalwidthcm Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('sepal_width', 'Sepal Width:') !!}
-    {!! Form::number('sepal_width', null, ['class' => 'form-control']) !!}
+    {!! Form::label('SepalWidthCm', 'Sepal width (cm):') !!}
+    {!! Form::number('SepalWidthCm', null, ['class' => 'form-control', 'step' => '0.01']) !!}
 </div>
 
-<!-- Petal Length Field -->
+<!-- Petallengthcm Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('petal_length', 'Petal Length:') !!}
-    {!! Form::number('petal_length', null, ['class' => 'form-control']) !!}
+    {!! Form::label('PetalLengthCm', 'Petal Length (cm):') !!}
+    {!! Form::number('PetalLengthCm', null, ['class' => 'form-control', 'step' => '0.01']) !!}
 </div>
 
-<!-- Petal Width Field -->
+<!-- Petalwidthcm Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('petal_width', 'Petal Width:') !!}
-    {!! Form::number('petal_width', null, ['class' => 'form-control']) !!}
+    {!! Form::label('PetalWidthCm', 'Petal Width (cm):') !!}
+    {!! Form::number('PetalWidthCm', null, ['class' => 'form-control', 'step' => '0.01']) !!}
 </div>
 
 <!-- Species Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('species', 'Species:') !!}
-    {!! Form::text('species', null, ['class' => 'form-control', 'maxlength' => 50, 'maxlength' => 50]) !!}
+    {!! Form::label('Species', 'Species:') !!}
+    {!! Form::text('Species', null, ['class' => 'form-control', 'maxlength' => 15]) !!}
 </div>

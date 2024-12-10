@@ -3,10 +3,10 @@
         <table class="table" id="data-table">
             <thead>
             <tr>
-                <th>Sepal Length</th>
-                <th>Sepal Width</th>
-                <th>Petal Length</th>
-                <th>Petal Width</th>
+                <th>Sepal Length (cm)</th>
+                <th>Sepal Width (cm)</th>
+                <th>Petal Length (cm)</th>
+                <th>Petal Width (cm)</th>
                 <th>Species</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -14,11 +14,11 @@
             <tbody>
             @foreach($data as $data)
                 <tr>
-                    <td>{{ $data->sepal_length }}</td>
-                    <td>{{ $data->sepal_width }}</td>
-                    <td>{{ $data->petal_length }}</td>
-                    <td>{{ $data->petal_width }}</td>
-                    <td>{{ $data->species }}</td>
+                    <td>{{ $data->SepalLengthCm }}</td>
+                    <td>{{ $data->SepalWidthCm }}</td>
+                    <td>{{ $data->PetalLengthCm }}</td>
+                    <td>{{ $data->PetalWidthCm }}</td>
+                    <td>{{ $data->Species }}</td>
                     <td  style="width: 120px">
                         {!! Form::open(['route' => ['data.destroy', $data->id], 'method' => 'delete']) !!}
                         <div class='btn-group'>

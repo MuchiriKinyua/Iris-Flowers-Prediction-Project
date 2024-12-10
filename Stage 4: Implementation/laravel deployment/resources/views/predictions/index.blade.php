@@ -8,24 +8,21 @@
                     <h1>Predictions</h1>
                 </div>
                 <div class="col-sm-6">
-                    <a class="btn btn-primary float-right"
-                       href="{{ route('predictions.create') }}">
-                        Add New
-                    </a>
+                    <form action="{{ route('predictions.predict') }}" method="POST">
+                        @csrf
+                        <input type="text" name="sample_data" placeholder="Enter sample data separated by commas" class="form-control">
+                        <button type="submit" class="btn btn-primary mt-2">Predict</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="content px-3">
-
-        @include('flash::message')
-
-        <div class="clearfix"></div>
-
-        <div class="card">
-            @include('predictions.table')
-        </div>
+        @if (isset($predictedSpecies))
+            <div class="alert alert-success">
+                <strong>Predicted Species: </strong>{{ $predictedSpecies }}
+            </div>
+        @endif
     </div>
-
 @endsection

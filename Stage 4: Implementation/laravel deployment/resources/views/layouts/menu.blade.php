@@ -8,7 +8,7 @@
 
 <li class="nav-item">
     <a href="{{ route('data.index') }}" class="nav-link {{ Request::is('data*') ? 'active' : '' }}">
-        <i class="nav-icon fas fa-database"></i> <!-- Icon for Data -->
+        <i class="nav-icon fas fa-database"></i>
         <p>Data</p>
     </a>
 </li>
@@ -26,6 +26,8 @@
         <p>Predictions</p>
     </a>
 </li>
+
+
 
 
 

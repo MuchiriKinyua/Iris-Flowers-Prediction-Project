@@ -8,11 +8,12 @@ use App\Repositories\BaseRepository;
 class DataRepository extends BaseRepository
 {
     protected $fieldSearchable = [
-        'sepal_length',
-        'sepal_width',
-        'petal_length',
-        'petal_width',
-        'species'
+        'Id',
+        'SepalLengthCm',
+        'SepalWidthCm',
+        'PetalLengthCm',
+        'PetalWidthCm',
+        'Species'
     ];
 
     public function getFieldsSearchable(): array

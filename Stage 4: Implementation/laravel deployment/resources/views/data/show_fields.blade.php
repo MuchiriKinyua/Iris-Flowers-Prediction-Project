@@ -1,30 +1,30 @@
-<!-- Sepal Length Field -->
+<!-- Sepallengthcm Field -->
 <div class="col-sm-12">
-    {!! Form::label('sepal_length', 'Sepal Length:') !!}
-    <p>{{ $data->sepal_length }}</p>
+    {!! Form::label('SepalLengthCm', 'Sepallengthcm:') !!}
+    <p>{{ $data->SepalLengthCm }}</p>
 </div>
 
-<!-- Sepal Width Field -->
+<!-- Sepalwidthcm Field -->
 <div class="col-sm-12">
-    {!! Form::label('sepal_width', 'Sepal Width:') !!}
-    <p>{{ $data->sepal_width }}</p>
+    {!! Form::label('SepalWidthCm', 'Sepalwidthcm:') !!}
+    <p>{{ $data->SepalWidthCm }}</p>
 </div>
 
-<!-- Petal Length Field -->
+<!-- Petallengthcm Field -->
 <div class="col-sm-12">
-    {!! Form::label('petal_length', 'Petal Length:') !!}
-    <p>{{ $data->petal_length }}</p>
+    {!! Form::label('PetalLengthCm', 'Petallengthcm:') !!}
+    <p>{{ $data->PetalLengthCm }}</p>
 </div>
 
-<!-- Petal Width Field -->
+<!-- Petalwidthcm Field -->
 <div class="col-sm-12">
-    {!! Form::label('petal_width', 'Petal Width:') !!}
-    <p>{{ $data->petal_width }}</p>
+    {!! Form::label('PetalWidthCm', 'Petalwidthcm:') !!}
+    <p>{{ $data->PetalWidthCm }}</p>
 </div>
 
 <!-- Species Field -->
 <div class="col-sm-12">
-    {!! Form::label('species', 'Species:') !!}
-    <p>{{ $data->species }}</p>
+    {!! Form::label('Species', 'Species:') !!}
+    <p>{{ $data->Species }}</p>
 </div>
 

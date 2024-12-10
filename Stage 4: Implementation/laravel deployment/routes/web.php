@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PredictionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::resource('data', App\Http\Controllers\DataController::class);
 Route::resource('predictions', App\Http\Controllers\PredictionController::class);
 Route::resource('mls', App\Http\Controllers\MlController::class);
+Route::resource('data', App\Http\Controllers\DataController::class);
+
+Route::post('/predictions/predict', [PredictionController::class, 'predict'])->name('predictions.predict');

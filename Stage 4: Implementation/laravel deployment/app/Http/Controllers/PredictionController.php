@@ -6,6 +6,8 @@ use App\Http\Requests\CreatePredictionRequest;
 use App\Http\Requests\UpdatePredictionRequest;
 use App\Http\Controllers\AppBaseController;
 use App\Repositories\PredictionRepository;
+use Phpml\Classification\LogisticRegression;
+use Phpml\ModelManager;
 use Illuminate\Http\Request;
 use Flash;
 
@@ -125,4 +127,28 @@ class PredictionController extends AppBaseController
 
         return redirect(route('predictions.index'));
     }
+    public function predict(Request $request)
+    {
+        // Retrieve input data
+        $input = $request->input('sample_data');  // Assuming data is passed as a comma-separated string
+    
+        // Process the input to match the format
+        $sample_values = explode(',', $input);
+        $sample_values = array_map('floatval', $sample_values);
+        $sample_values_2d = [$sample_values];  // Reshape to 2D
+    
+        // Example using php-ml's ModelManager to load the pkl model
+        $modelManager = new ModelManager();
+        $model = $modelManager->restoreFromFile(public_path('models/logistic_regression_model.pkl'));
+    
+        // Predict the species
+        $prediction = $model->predict($sample_values_2d); // Corrected line
+    
+        // Map to class names
+        $classNames = ['Setosa', 'Versicolor', 'Virginica'];  // Example class names
+        $predictedSpecies = $classNames[$prediction[0]];
+    
+        return view('predictions.index', compact('predictedSpecies'));
+    }
+    
 }

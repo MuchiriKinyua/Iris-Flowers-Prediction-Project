@@ -9,33 +9,32 @@ class Data extends Model
     public $table = 'data';
 
     public $fillable = [
-        'sepal_length',
-        'sepal_width',
-        'petal_length',
-        'petal_width',
-        'species'
+        'Id',
+        'SepalLengthCm',
+        'SepalWidthCm',
+        'PetalLengthCm',
+        'PetalWidthCm',
+        'Species'
     ];
 
     protected $casts = [
-        'sepal_length' => 'float',
-        'sepal_width' => 'float',
-        'petal_length' => 'float',
-        'petal_width' => 'float',
-        'species' => 'string'
+        'SepalLengthCm' => 'decimal:2',
+        'SepalWidthCm' => 'decimal:2',
+        'PetalLengthCm' => 'decimal:2',
+        'PetalWidthCm' => 'decimal:2',
+        'Species' => 'string'
     ];
 
     public static array $rules = [
-        'sepal_length' => 'nullable|numeric',
-        'sepal_width' => 'nullable|numeric',
-        'petal_length' => 'nullable|numeric',
-        'petal_width' => 'nullable|numeric',
-        'species' => 'nullable|string|max:50',
-        'created_at' => 'required',
-        'updated_at' => 'required'
+        'Id' => 'nullable',
+        'SepalLengthCm' => 'nullable|numeric',
+        'SepalWidthCm' => 'nullable|numeric',
+        'PetalLengthCm' => 'nullable|numeric',
+        'PetalWidthCm' => 'nullable|numeric',
+        'Species' => 'nullable|string|max:15',
+        'created_at' => 'nullable',
+        'updated_at' => 'nullable'
     ];
 
-    public function predictions(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(\App\Models\Prediction::class, 'data_id');
-    }
+    
 }
