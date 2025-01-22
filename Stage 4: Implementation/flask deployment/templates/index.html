@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Prediction Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f2f2; /* Light floral background */
+            background-image: url('https://www.transparenttextures.com/patterns/spring-flower.png'); /* Floral pattern */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ffffff; /* White card background */
+            border: 1px solid #ddd; /* Subtle border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-container h1 {
+            color: #ff6f61; /* Coral color for title */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container .btn {
+            background-color: #ff6f61; /* Coral button */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container .btn:hover {
+            background-color: #e65a50; /* Darker coral on hover */
+        }
+
+        .form-container .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4caf50; /* Green for success */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Iris Flower Prediction</h1>
+        <form action='/predict' method="POST">
+            <label for="sepal_length">Sepal Length:</label>
+            <input type='text' id="sepal_length" name='sepal_length' placeholder="Enter sepal length">
+            
+            <label for="sepal_width">Sepal Width:</label>
+            <input type='text' id="sepal_width" name='sepal_width' placeholder="Enter sepal width">
+            
+            <label for="petal_length">Petal Length:</label>
+            <input type='text' id="petal_length" name='petal_length' placeholder="Enter petal length">
+            
+            <label for="petal_width">Petal Width:</label>
+            <input type='text' id="petal_width" name='petal_width' placeholder="Enter petal width">
+            
+            <div class="result">
+                Class: {{ result }}
+            </div>
+            
+            <button type='submit' class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
