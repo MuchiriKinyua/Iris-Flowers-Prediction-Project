@@ -1,6 +1,6 @@
-![Screenshot from 2025-01-28 16-13-16](https://github.com/user-attachments/assets/288ecaed-4661-4cee-a366-de5e219e770d)
-
 # Iris Dataset Project
+
+![Screenshot from 2025-01-28 16-13-16](https://github.com/user-attachments/assets/288ecaed-4661-4cee-a366-de5e219e770d)
 
 ## Overview
 
@@ -64,7 +64,7 @@ Random Forest: An ensemble learning method for improved accuracy and feature imp
 
 # Evaluation:
 
-Model performance was evaluated using metrics such as:
+## Model performance was evaluated using metrics such as:
 
 Accuracy
 
@@ -74,11 +74,11 @@ Recall
 
 F1 Score
 
-Confusion Matrix
+## Confusion Matrix
 
 A comparison of all models was provided to select the best-performing model.
 
-Visualization:
+## Visualization:
 
 Decision boundary plots to illustrate how different models classify the dataset.
 
@@ -86,7 +86,7 @@ Heatmaps for confusion matrices.
 
 Feature importance visualization for Random Forest.
 
-Results
+## Results
 
 Best Performing Model: [e.g., KNN].
 
@@ -94,7 +94,7 @@ Accuracy: 97%.
 
 Insights into how features like Petal Length and Petal Width play significant roles in species classification.
 
-Tools and Libraries
+## Tools and Libraries
 
 The project was implemented using the following tools and libraries:
 
@@ -110,7 +110,7 @@ Scikit-learn: For model building, training, and evaluation.
 
 Jupyter Notebook: For running and organizing code interactively.
 
-How to Run the Project
+## How to Run the Project
 
 Clone the repository to your local machine.
 
@@ -134,7 +134,7 @@ Open the main notebook file to view or execute the project step by step.
 
 The model has been deployed as a web application using Flask. Users can input flower measurements to predict the species in real-time.
 
-Steps to Run the Flask App
+## Steps to Run the Flask App
 
 Ensure Flask is installed:
 
